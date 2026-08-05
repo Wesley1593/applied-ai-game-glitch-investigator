@@ -27,12 +27,6 @@ Unit tests (`test_game_logic.py` + `test_agent.py`): 10 passed, 0 failed.
 
 Run `pytest` to reproduce.
 
-## Testing Results
-
-Unit tests (`test_game_logic.py` + `test_agent.py`): 10 passed, 0 failed.
-
-Run `pytest` to reproduce.
-
 ## Guardrails
 
 - Input validation prevents crashes.

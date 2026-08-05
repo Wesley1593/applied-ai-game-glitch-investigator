@@ -10,15 +10,16 @@
 
 **What task did you give the agent?**
 
-<!-- Describe the goal you asked the agent to accomplish -->
+The in-app `GameAgent` (`agent.py`) runs a multi-step reasoning chain: given a secret number and a guess, it analyzes the guess, plans a response, generates a hint, and verifies the hint against the ground truth before logging the result.
 
 **What did the agent do?**
 
-<!-- List the steps the agent took (files edited, commands run, etc.) -->
+For every guess, `investigate_guess()` runs four steps: Analyze -> Plan -> Generate Hint -> Verify. The full step-by-step reasoning trace across several runs — plus a case where the verify step is fed a deliberately wrong hint to prove it actually catches errors — is committed at [`logs/agent_reasoning_trace.md`](logs/agent_reasoning_trace.md).
 
 **What did you have to verify or fix manually?**
 
-<!-- Describe anything the agent got wrong or that required human review -->
+The agent's verify step only catches disagreement between the hint and the guess/secret comparison — it doesn't know about the original string-conversion bug from the Module 1-2 version, so that had to be found and fixed manually by inspecting `app.py` (see `reflection.md`).
+
 ## Test Generation (SF7)
 
 > Document how you used AI to help generate or improve tests.
