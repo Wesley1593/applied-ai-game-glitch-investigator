@@ -19,9 +19,6 @@
 **What did you have to verify or fix manually?**
 
 <!-- Describe anything the agent got wrong or that required human review -->
-
----
-
 ## Test Generation (SF7)
 
 > Document how you used AI to help generate or improve tests.
