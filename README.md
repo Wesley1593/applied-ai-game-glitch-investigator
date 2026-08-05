@@ -58,3 +58,24 @@ tests/test_game_logic.py::test_zero_and_negative_guesses PASSED          [100%]
 ============================== 7 passed in 0.04s ==============================
 ```
 
+## Original Project
+
+Originally a debugging number guessing game.
+
+## AI Agent Upgrade
+
+The project now uses an agent workflow:
+
+Analyze → Plan → Generate Hint → Verify → Log
+
+
+## Testing
+
+pytest output:
+
+10 passed
+
+
+## Design Decisions
+
+The agent separates reasoning, validation, and logging.
