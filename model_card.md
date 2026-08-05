@@ -1,51 +1,50 @@
-# Model Card: Game Glitch Investigator Agent
+# Model Card: Game Glitch Investigator
 
 ## AI Feature Used
 
-This project uses an agent workflow that analyzes player guesses,
-creates a response plan, generates hints, verifies the result,
-and logs each interaction.
+This project uses an agent workflow that analyzes guesses,
+creates a response plan, generates hints, verifies results,
+and logs decisions.
 
 ## Purpose
 
-The agent improves the original guessing game by adding a reasoning
-workflow instead of directly returning a hint.
+The agent improves the original guessing game by adding
+a structured reasoning process.
 
 ## Limitations
 
-The agent does not use machine learning.
-It follows programmed decision rules based on the secret number
-and player's guess.
+The agent uses rule-based logic and does not learn from
+previous games.
 
 ## Biases
 
-The agent may provide limited responses because it only understands
-numeric guessing scenarios.
+The system is limited to numeric guessing scenarios and
+may not generalize to other games.
 
 ## Guardrails
 
 - Input validation prevents crashes.
-- Validator checks generated hints.
-- Logger records game decisions.
+- Validator checks the agent's hint.
+- Logger records decisions.
 
 ## AI Collaboration
 
 AI assisted with:
-- code organization
 - debugging
+- architecture design
 - test creation
-- documentation improvements
+- documentation
 
 ## Good AI Suggestion
 
-Separating game logic from the Streamlit UI improved testing.
+Separating the UI and game logic improved maintainability.
 
 ## Bad AI Suggestion
 
-An AI suggestion that changed game state logic without considering
-Streamlit session state could have caused bugs.
+Automatically changing core game rules without testing
+could introduce bugs.
 
 ## Lessons Learned
 
-Agent workflows benefit from separating reasoning,
-verification, and logging components.
+Agent systems require clear separation between reasoning,
+verification, and execution.

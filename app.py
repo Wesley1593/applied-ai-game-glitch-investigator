@@ -29,11 +29,14 @@ def parse_guess(raw: str):
             value = int(float(raw))
         else:
             value = int(raw)
+
     except Exception:
         return False, None, "That is not a number."
 
-    return True, value, None
+    if value < 1:
+        return False, None, "Guess must be a positive number."
 
+    return True, value, None
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
 
@@ -312,14 +315,4 @@ st.caption(
     "Built by an AI that claims this code is production-ready."
 )
 
-try:
 
-    guess=int(user_input)
-
-except ValueError:
-
-    st.error("Please enter a valid number.")
-    
-
-if guess < 1:
-    st.error("Guess must be positive.")
